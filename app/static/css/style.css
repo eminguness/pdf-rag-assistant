@@ -154,6 +154,52 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  position: relative;
+}
+
+.user-auth {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-auth button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+#login-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+#register-btn {
+  background-color: #3a3a3a;
+  color: white;
+}
+
+#logout-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#logout-btn:hover {
+  color: white;
+}
+
+#username-display {
+  margin-right: 10px;
+  color: white;
 }
 
 .response {
@@ -167,6 +213,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 }
 
 .placeholder-container {

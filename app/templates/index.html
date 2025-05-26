@@ -14,24 +14,34 @@
         <img src="{{ url_for('static', filename='images/aktiftech.png') }}" alt="AktifTech Logo" class="header-icon" />
         AktifTech Asistan
       </h2>
-
       <div class="new-chat" id="new-chat-btn">
         <span class="new-chat-icon">＋</span> Yeni Sohbet
       </div>
-
       <ul id="chat-history"></ul>
     </aside>
-
+ 
     <main class="chat-area">
+      <div class="user-auth">
+        <div id="auth-buttons">
+          <button id="login-btn">Oturum Aç</button>
+          <button id="register-btn">Kaydol</button>
+        </div>
+        <div id="user-profile" style="display: none;">
+          <span id="username-display"></span>
+          <button id="logout-btn"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+      </div>
+      
       <div class="response" id="response-area">
         <div class="placeholder-container">
-            <img src="{{ url_for('static', filename='images/aktiftech.png') }}" alt="AktifTech Logo" class="header-icon-inline-large" />
+          <img src="{{ url_for('static', filename='images/aktiftech.png') }}" alt="AktifTech Logo" class="header-icon-inline-large" />
           <p class="placeholder-text">
             Merhaba, ben ChatBot.<br />
             Bugün size nasıl yardımcı olabilirim?
           </p>
         </div>
       </div>
+      
       <form id="chat-form" class="chat-form">
         <input type="text" id="user-input" placeholder="Sorunuzu yazın..." autocomplete="off" required />
         <button type="submit">
@@ -40,9 +50,9 @@
       </form>
     </main>
   </div>
-  <!-- HTML içine ekle (resmi göndermek için bir veri taşıyıcı) -->
+  
   <div id="config" data-logo-url="{{ url_for('static', filename='images/aktiftech.png') }}"></div>
-
+ 
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
