@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Logoları tıklanabilir yap ve ana sayfaya yönlendir
+  const logos = document.querySelectorAll('.header-icon, .header-icon-inline-large');
+  logos.forEach(logo => {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', function() {
+      window.location.href = '/';
+    });
+  });
+
   // Şifre göster/gizle fonksiyonu
   const passwordToggles = document.querySelectorAll('.password-toggle');
 
@@ -35,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     input.addEventListener('blur', function () {
-      warning.style.display = 'none'; // Odak dışına çıkınca uyarıyı gizle
+      warning.style.display = 'none';
     });
   });
 
@@ -48,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value;
-      const rememberMe = document.querySelector('input[name="remember"]').checked;
+      const rememberMe = document.querySelector('input[name="remember"]')?.checked;
 
       // Basit validasyon
       if (!email || !password) {
@@ -56,10 +65,20 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      console.log('Giriş bilgileri:', { email, password, rememberMe });
-
-      alert('Giriş başarılı! Ana sayfaya yönlendiriliyorsunuz...');
-      // window.location.href = '/';
+      // Sahte kullanıcı doğrulama
+      if (email === 'admin@gmail.com' && password === 'admin123') {
+        // Kullanıcı bilgilerini localStorage'a kaydet
+        localStorage.setItem('loggedInUser', JSON.stringify({
+          email: email,
+          initials: email.substring(0, 2).toUpperCase()
+        }));
+        
+        alert('Giriş başarılı! Ana sayfaya yönlendiriliyorsunuz...');
+        window.location.href = '/kullanici_girisi';
+      }
+      else {
+        alert('Hatalı e-posta veya şifre!');
+      }
     });
   }
 });

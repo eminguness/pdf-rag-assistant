@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  const logos = document.querySelectorAll('.header-icon, .header-icon-inline-large');
+  logos.forEach(logo => {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', function() {
+      window.location.href = '/';
+    });
+  });
+
   // Caps Lock uyarısı
   const passwordInputs = document.querySelectorAll('input[type="password"]');
 
@@ -35,9 +43,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     input.addEventListener('blur', function () {
-      warning.style.display = 'none'; // Odak dışına çıkınca uyarıyı gizle
+      warning.style.display = 'none';
     });
   });
+
+  // E-posta yazıldığında kullanıcı adını otomatik doldur
+  const emailInput = document.getElementById('email');
+  const usernameInput = document.getElementById('username');
+
+  if (emailInput && usernameInput) {
+    // Kullanıcı adını tamamen tıklanamaz ve soluk yap
+    usernameInput.readOnly = true;
+    usernameInput.classList.add('username-input');
+
+    // E-posta değiştiğinde kullanıcı adını güncelle
+    emailInput.addEventListener('input', function() {
+      const email = this.value.trim();
+      if (email.includes('@')) {
+        usernameInput.value = email.split('@')[0];
+      } else {
+        usernameInput.value = email;
+      }
+    });
+  }
 
   // Form gönderim kontrolü
   const registerForm = document.getElementById('register-form');
@@ -52,6 +80,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const confirmPassword = document.getElementById('confirm-password').value;
 
       // Basit validasyon
+      if (!email.includes('@')) {
+        alert('Geçerli bir e-posta adresi giriniz!');
+        return;
+      }
+
       if (password !== confirmPassword) {
         alert('Şifreler eşleşmiyor!');
         return;
@@ -64,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       console.log('Kayıt bilgileri:', { username, email, password });
 
-      alert('Kayıt başarılı! Giriş sayfasına yönlendiriliyorsunuz...');
+      alert(`Kayıt başarılı!\nKullanıcı Adınız: ${username}\nE-posta: ${email}\nGiriş sayfasına yönlendiriliyorsunuz...`);
       // window.location.href = '/login';
     });
   }

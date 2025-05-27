@@ -14,6 +14,10 @@ def register():
 def login():
     return render_template("login.html")
 
+@main_routes.route("/kullanici_girisi")
+def kullanici_sayfasi():
+    return render_template("kullanici_girisi.html")
+
 
 @main_routes.route("/ask", methods=["POST"])
 def ask():
