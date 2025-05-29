@@ -1,3 +1,5 @@
+.env klasörü aşağıdaki gibi olmalı
+
 AZURE_OPENAI_API_KEY =
 
 AZURE_OPENAI_ENDPOINT = 
