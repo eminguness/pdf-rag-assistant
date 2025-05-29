@@ -1,0 +1,31 @@
+Aktif Bank Yapay Zeka Yolculuğu - Gerçekleşen Adımlar (KPMG ÖZET)
+Aktif Bank'ın yapay zeka dönüşüm yolculuğu, mevcut durumun kapsamlı bir şekilde değerlendirilmesiyle başlamıştır. Bu süreçte teknoloji altyapısı, mimari yapı, iş süreçleri, yönetişim modeli, organizasyonel yapı, insan kaynağı yetkinlikleri ve mevcut yapay zeka kullanım durumu detaylı olarak analiz edilmiştir. Bu analizler sayesinde bankanın ihtiyaçları, güçlü yönleri ve gelişim alanları net bir şekilde ortaya konmuştur.
+Bu analizlerin ardından, Aktif Bank’a özel olarak bir farkındalık ve vizyon çalıştayı gerçekleştirilmiştir. Çalıştayda, bankacılık sektöründe yapay zekanın kullanım alanları, sağladığı avantajlar, sektörel dönüşüm potansiyeli ve rekabetçi faydaları ele alınmıştır.
+Devamında, kurumun farklı iş birimlerinin katılımıyla bir use case çalıştayı düzenlenmiştir. Bu çalıştayda, yapay zeka ile değerlendirilebilecek tüm potansiyel kullanım senaryoları belirlenmiştir. Yapılan bu değerlendirmeler sonucunda 182 fikir içerisinden, kısa vadeli hızlı kazanım sağlayacak ve stratejik öneme sahip öncelikli kullanım senaryoları seçilmiştir.
+Seçilen use case’lerin hayata geçirilebilmesi için ihtiyaç duyulan teknolojik altyapı, mimari uyum ve veri ihtiyaçları doğrultusunda gerekli aksiyon planları oluşturulmuştur.
+Son aşamada, tüm bu çalışmalar bir implementasyon yol haritasına dönüştürülmüştür. Yalnızca uygulama değil, aynı zamanda süreç iyileştirme, altyapı yatırımı, yönetişim, insan kaynağı gelişimi ve kültürel dönüşüm gibi destekleyici projeler de bu planlamaya dahil edilmiştir. Bu kapsamlı yaklaşım sayesinde Aktif Bank ve ekosistemi, yapay zeka alanında güçlü, sürdürülebilir ve stratejik bir dönüşüm gerçekleştirmiştir.
+________________________________________
+Video Özeti (Erkut Baloğlu Video Özet) - Aktif Bank: Yapay Zeka ve Dijitalleşme ile Bankacılıkta Devrim
+Aktif Bank olarak, bankacılık sektörünü sadece bir finansal hizmet sağlayıcısı olarak değil, aynı zamanda bir finansal teknoloji ekosistemi olarak görüyoruz. Teknolojiyi sadece iç operasyonlarımızda değil, tüm sektöre sunarak bankacılığı daha verimli ve kullanıcı dostu hale getiriyoruz.
+UPT, Paso gibi dijital platformlarımızla 20 milyonun üzerinde kullanıcıya hizmet veriyoruz.
+Yapay zeka, müşteri hizmetlerinden video bankacılığına kadar birçok farklı alanda uygulanmaktadır. Ayrıca, vücut dili senkronizasyonu gibi ileri düzey ARGE projeleriyle, geleceğin bankacılık hizmetleri bugünden şekillendirilmektedir.
+Müşteri deneyimini daha iyi anlamak ve her müşteriye özel hizmet sunmak için yapay zeka teknolojileri aktif şekilde kullanılmaktadır. Yapay zeka, müşteri davranışlarını analiz ederek her bireye özel hizmetler sunulmasına yardımcı olmaktadır.
+Yapay zeka eğitim süreçlerinde karşılaşılan en büyük zorluklardan biri, veri kalitesinin yüksek olması ve eğitimlerin etik açıdan doğru şekilde yapılmasıdır. Bu zorlukların üstesinden gelmek için sürekli olarak ARGE ve inovasyon yapılmaktadır.
+Yapay zeka, insanın yerini alacak bir teknoloji değil, insanla birlikte çalışacak bir araçtır. Empati kurma ve hayal gücü gibi insana özgü özellikler, yapay zekanın yerine getiremediği alanlardır. Bu nedenle, banka çalışanlarının yapay zekayı etkin bir şekilde kullanarak müşterilere en iyi hizmeti sunmaları sağlanmaktadır.
+Aktif Bank olarak, gelecekte yapay zeka ve dijitalleşme süreçlerini daha da derinleştirmeyi hedefliyoruz. Ayrıca sektörle paylaşarak, sadece iç hizmetlerde değil, tüm bankacılık sektörü için fayda sağlamayı amaçlıyoruz. Sonuç olarak, Aktif Bank olarak bankacılık sektörünün dijitalleşme yolculuğunda öncü bir rol üstleniyor, bankacılıkta geleceği bugünden şekillendirerek sektörü dönüştürüyoruz.
+________________________________________
+Aktifbank ve Aktiftech Özet - AktifTech ile Yapay Zeka ve Makine Öğrenmesi Temelli Dönüşüm Sürecimiz
+Aktif Bank iştiraki AktifTech liderliğinde yürütülen çalışmalar, hem bankacılık operasyonlarında hem de müşteri deneyiminde yapay zekanın gücünü etkin şekilde ortaya koymuştur. Bu süreçte, çeşitli alanlarda tamamlanmış stratejik AI/ML projeleri şunlardır:
+•	Günlük Log Kayıtlarının Makine Öğrenmesi Temelli Analizi ve Değerlendirilmesi
+•	Yeni N Kolay Mobil Uygulaması ve Tahmine Dayalı Davranış Analizi
+•	Yapay Zeka Destekli Mikroservis Mimarisi ile Super App Geliştirilmesi
+•	Makine Öğrenmesi Tabanlı Sahtekarlık Tespiti ve Yeni Nesil Kartlı Ödeme Sistemi
+Devam eden projeler kapsamında Yapay Öğrenme Destekli Sürekli Öğrenen Kurumsal Asistan Projesi ile kurum içi doküman havuzunda yer alan verilerin maskelenmiş bir şekilde RAG teknolojisi kullanılarak kullanıcılara yanıtlar üretilmesi hedeflenmektedir.
+Tamamlanan projelerin yanı sıra, yapay zeka ve makine öğrenmesi teknolojileri birçok ana iş sürecine başarıyla entegre edilmiştir:
+•	Kredi Karar Süreçleri
+•	Müşteri Segmentasyonu
+•	Tahsilat Süreçleri
+•	Müşteri Eğilimi Tahmini
+•	Erken Uyarı Mekanizmaları
+•	Varlık Tahmini
+

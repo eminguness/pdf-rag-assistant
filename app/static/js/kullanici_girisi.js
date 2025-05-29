@@ -7,44 +7,31 @@ const profileCircle = document.getElementById("profile-circle");
 const logoutBtn = document.getElementById("logout-btn");
 const authButtons = document.getElementById("auth-buttons");
 
-// AktifTech logosunun yolu
 const aktiftechLogoUrl = document.getElementById("config").dataset.logoUrl;
 
-// Tüm sohbetleri tutan dizi
 let chats = [];
-
-// Şu anda aktif olan sohbetin ID'si
 let activeChatId = null;
 
-// Kullanıcı oturum kontrolü
 function checkUserSession() {
   const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
   
   if (loggedInUser) {
-    // Kullanıcı giriş yapmış
     authButtons.style.display = 'none';
     profileCircle.textContent = loggedInUser.initials;
     profileCircle.style.display = 'flex';
     logoutBtn.style.display = 'block';
   } else {
-    // Kullanıcı giriş yapmamış
     authButtons.style.display = 'flex';
     profileCircle.style.display = 'none';
     logoutBtn.style.display = 'none';
   }
 }
 
-// ... (önceki kodlar aynı)
-
-// Çıkış yap - GÜNCELLENDİ
 function logout() {
   localStorage.removeItem('loggedInUser');
-  // Sayfayı yenile ve giriş yapılmamış halini göster
   window.location.href = '/';
 }
 
-// ... (sonraki kodlar aynı)
-// Placeholder göster
 function showPlaceholder() {
   responseArea.innerHTML = `
     <div class="placeholder-container">
@@ -57,7 +44,6 @@ function showPlaceholder() {
   `;
 }
 
-// Yeni sohbet oluştur
 function addNewChat() {
   const newId = chats.length ? Math.max(...chats.map(c => c.id)) + 1 : 1;
 
@@ -75,7 +61,6 @@ function addNewChat() {
   input.focus();
 }
 
-// Aktif sohbeti ayarla
 function setActiveChat(id) {
   activeChatId = id;
   renderChatHistory();
@@ -92,7 +77,6 @@ function setActiveChat(id) {
   input.placeholder = "Sorunuzu yazın...";
 }
 
-// Sohbet geçmişini render et
 function renderChatHistory() {
   chatHistory.innerHTML = "";
 
@@ -129,14 +113,12 @@ function renderChatHistory() {
     li.appendChild(titleSpan);
     li.appendChild(actionsDiv);
     
-    // Sohbet öğesine tıklama
     li.addEventListener("click", (e) => {
       if (!e.target.closest('.chat-history-item-actions')) {
         setActiveChat(chat.id);
       }
     });
     
-    // 3 nokta butonuna tıklama
     actionsBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       document.querySelectorAll('.chat-history-item-actions-menu').forEach(menu => {
@@ -145,7 +127,6 @@ function renderChatHistory() {
       actionsMenu.classList.toggle('show');
     });
     
-    // Yeniden adlandır butonu
     renameBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       actionsMenu.classList.remove('show');
@@ -156,7 +137,6 @@ function renderChatHistory() {
       }
     });
     
-    // Sil butonu
     deleteBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       if (confirm("Bu sohbeti silmek istediğinizden emin misiniz?")) {
@@ -172,7 +152,6 @@ function renderChatHistory() {
     chatHistory.appendChild(li);
   });
 
-  // Menü dışına tıklanınca kapat
   document.addEventListener("click", (e) => {
     if (!e.target.closest('.chat-history-item-actions')) {
       document.querySelectorAll('.chat-history-item-actions-menu').forEach(menu => {
@@ -182,7 +161,6 @@ function renderChatHistory() {
   });
 }
 
-// Mesajları render et
 function renderMessages() {
   const chat = chats.find(c => c.id === activeChatId);
   if (!chat) {
@@ -202,13 +180,12 @@ function renderMessages() {
   responseArea.scrollTop = responseArea.scrollHeight;
 }
 
-// Yeni sohbet butonu
 newChatBtn.addEventListener("click", () => {
   addNewChat();
 });
 
-// Mesaj gönderme formu
-form.addEventListener("submit", (e) => {
+// GÜNCELLENDİ: Kullanıcının mesajını Flask API'ye gönderip cevabı al
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const text = input.value.trim();
   if (!text) return;
@@ -232,28 +209,42 @@ form.addEventListener("submit", (e) => {
   input.value = "";
   input.focus();
 
-  // Bot cevabı simülasyonu
-  setTimeout(() => {
-    const botResponse = "Bu, botun cevap simülasyonudur.";
-    chat.messages.push({ sender: "bot", text: botResponse });
+  const loadingMessage = { sender: "bot", text: "Yanıt yazılıyor..." };
+  chat.messages.push(loadingMessage);
+  renderMessages();
+
+  try {
+    const response = await fetch("/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question: text })
+    });
+
+    const data = await response.json();
+    const botAnswer = data.answer || "Cevap alınamadı.";
+
+    chat.messages.pop(); // kaldır "Yanıt yazılıyor..."
+    chat.messages.push({ sender: "bot", text: botAnswer });
     renderMessages();
-  }, 700);
+  } catch (error) {
+    chat.messages.pop();
+    chat.messages.push({ sender: "bot", text: "Bir hata oluştu. Lütfen tekrar deneyin." });
+    renderMessages();
+    console.error("LLM cevabı alınamadı:", error);
+  }
 });
 
-// Oturum aç butonu yönlendirme
+// Oturum yönlendirme
 document.getElementById('login-btn')?.addEventListener('click', () => {
   window.location.href = '/login';
 });
 
-// Kaydol butonu yönlendirme
 document.getElementById('register-btn')?.addEventListener('click', () => {
   window.location.href = '/register';
 });
 
-// Çıkış butonu
 logoutBtn?.addEventListener('click', logout);
 
-// Sayfa yüklendiğinde
 window.addEventListener("DOMContentLoaded", () => {
   checkUserSession();
   showPlaceholder();

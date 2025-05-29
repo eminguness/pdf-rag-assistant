@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify
+from app.chatbot.rag_chain import get_rag_answer  # LangChain tarafındaki fonksiyonu import ediyoruz
 
 main_routes = Blueprint("main_routes", __name__)
 
@@ -18,13 +19,13 @@ def login():
 def kullanici_sayfasi():
     return render_template("kullanici_girisi.html")
 
-
+# Kullanıcının sorusunu LLM'e gönder ve cevabı dön
 @main_routes.route("/ask", methods=["POST"])
 def ask():
     data = request.get_json()
     question = data.get("question", "")
 
-    # MOCK cevap (buraya rag_chain cevabı gelecek ileride)
-    answer = f"Bu bir örnek cevaptır. Soru: {question}"
+    # RAG sisteminden cevap al
+    answer = get_rag_answer(question)
 
     return jsonify({"answer": answer})
