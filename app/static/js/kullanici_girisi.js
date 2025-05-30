@@ -14,7 +14,7 @@ let activeChatId = null;
 
 function checkUserSession() {
   const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-  
+
   if (loggedInUser) {
     authButtons.style.display = 'none';
     profileCircle.textContent = loggedInUser.initials;
@@ -59,6 +59,7 @@ function addNewChat() {
   setActiveChat(newId);
   input.value = "";
   input.focus();
+  saveHistory();
 }
 
 function setActiveChat(id) {
@@ -83,42 +84,42 @@ function renderChatHistory() {
   chats.forEach((chat) => {
     const li = document.createElement("li");
     li.className = (chat.id === activeChatId) ? "active" : "";
-    
+
     const titleSpan = document.createElement("span");
     titleSpan.textContent = chat.title;
-    
+
     const actionsDiv = document.createElement("div");
     actionsDiv.className = "chat-history-item-actions";
-    
+
     const actionsBtn = document.createElement("button");
     actionsBtn.className = "chat-history-item-actions-btn";
     actionsBtn.innerHTML = '<i class="fas fa-ellipsis-v"></i>';
-    
+
     const actionsMenu = document.createElement("div");
     actionsMenu.className = "chat-history-item-actions-menu";
-    
+
     const renameBtn = document.createElement("button");
     renameBtn.className = "rename-btn";
     renameBtn.innerHTML = '<i class="fas fa-pen"></i> Yeniden Adlandır';
-    
+
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-btn";
     deleteBtn.innerHTML = '<i class="fas fa-trash"></i> <span>Sil</span>';
-    
+
     actionsMenu.appendChild(renameBtn);
     actionsMenu.appendChild(deleteBtn);
     actionsDiv.appendChild(actionsBtn);
     actionsDiv.appendChild(actionsMenu);
-    
+
     li.appendChild(titleSpan);
     li.appendChild(actionsDiv);
-    
+
     li.addEventListener("click", (e) => {
       if (!e.target.closest('.chat-history-item-actions')) {
         setActiveChat(chat.id);
       }
     });
-    
+
     actionsBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       document.querySelectorAll('.chat-history-item-actions-menu').forEach(menu => {
@@ -126,7 +127,7 @@ function renderChatHistory() {
       });
       actionsMenu.classList.toggle('show');
     });
-    
+
     renameBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       actionsMenu.classList.remove('show');
@@ -134,9 +135,10 @@ function renderChatHistory() {
       if (newTitle && newTitle !== chat.title) {
         chat.title = newTitle;
         renderChatHistory();
+        saveHistory();
       }
     });
-    
+
     deleteBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       if (confirm("Bu sohbeti silmek istediğinizden emin misiniz?")) {
@@ -146,9 +148,10 @@ function renderChatHistory() {
           setActiveChat(activeChatId);
         }
         renderChatHistory();
+        saveHistory();
       }
     });
-    
+
     chatHistory.appendChild(li);
   });
 
@@ -184,7 +187,6 @@ newChatBtn.addEventListener("click", () => {
   addNewChat();
 });
 
-// GÜNCELLENDİ: Kullanıcının mesajını Flask API'ye gönderip cevabı al
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const text = input.value.trim();
@@ -223,9 +225,10 @@ form.addEventListener("submit", async (e) => {
     const data = await response.json();
     const botAnswer = data.answer || "Cevap alınamadı.";
 
-    chat.messages.pop(); // kaldır "Yanıt yazılıyor..."
+    chat.messages.pop();
     chat.messages.push({ sender: "bot", text: botAnswer });
     renderMessages();
+    saveHistory();
   } catch (error) {
     chat.messages.pop();
     chat.messages.push({ sender: "bot", text: "Bir hata oluştu. Lütfen tekrar deneyin." });
@@ -233,6 +236,41 @@ form.addEventListener("submit", async (e) => {
     console.error("LLM cevabı alınamadı:", error);
   }
 });
+
+// 🔄 GEÇMİŞİ KAYDET
+function saveHistory() {
+  fetch(`${window.location.origin}/save_history`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(chats),
+  }).then((res) => {
+    if (!res.ok) throw new Error("Geçmiş kaydedilemedi.");
+  }).catch((err) => {
+    console.error("Geçmiş kaydında hata:", err);
+  });
+}
+
+// 🔄 GEÇMİŞİ YÜKLE
+async function loadHistory() {
+  try {
+    const response = await fetch(`${window.location.origin}/load_history`);
+    if (!response.ok) throw new Error("Geçmiş yüklenemedi.");
+    const data = await response.json();
+    if (Array.isArray(data)) {
+      chats = data;
+      if (chats.length > 0) {
+        activeChatId = chats[0].id;
+        renderChatHistory();
+        setActiveChat(activeChatId);
+      } else {
+        showPlaceholder();
+      }
+    }
+  } catch (err) {
+    console.error("Geçmiş yükleme hatası:", err);
+    showPlaceholder();
+  }
+}
 
 // Oturum yönlendirme
 document.getElementById('login-btn')?.addEventListener('click', () => {
@@ -245,7 +283,8 @@ document.getElementById('register-btn')?.addEventListener('click', () => {
 
 logoutBtn?.addEventListener('click', logout);
 
+// Sayfa yüklendiğinde
 window.addEventListener("DOMContentLoaded", () => {
   checkUserSession();
-  showPlaceholder();
+  loadHistory();
 });

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 2,
+    "title": "Aktif bank ,yapay zekaya ayak ...",
+    "messages": [
+      {
+        "sender": "user",
+        "text": "Aktif bank ,yapay zekaya ayak uydurmak için ne yapıyor"
+      },
+      {
+        "sender": "bot",
+        "text": "Aktif Bank, iştirak şirketi AktifTech öncülüğünde makine öğrenmesi temelli stratejik yapay zekâ projeleri (örneğin günlük log analizi) geliştirip hayata geçiriyor. KPMG işbirliğiyle teknoloji altyapısı, mimari, süreçler, yönetim ve yetkinlikleri analiz ederek vizyon atölyeleri düzenleyip öncelikli use case’leri belirleyip uygulama yol haritası oluşturdu. UPT, Paso gibi dijital platformlarında müşteri hizmetlerinden video bankacılığına kadar yapay zekâyı entegre ederek bankacılıkta dijitalleşme dönüşümüne öncülük ediyor."
+      }
+    ],
+    "titleSet": true
+  },
+  {
+    "id": 1,
+    "messages": [
+      {
+        "sender": "user",
+        "text": "Yapay zeka bankacılığı nasıl etkileyecek"
+      },
+      {
+        "sender": "bot",
+        "text": "Yapay zeka, işlem süreçlerini otomatikleştirip veri analitiğiyle operasyonel verimliliği artıracak ve müşteri deneyimini kişiselleştirerek hizmet kalitesini yükseltecek. Bankacılığı yalnızca finansal bir hizmet değil, tüm sektöre açılan bir teknoloji ekosistemi haline getirerek dijitalleşme yolculuğunu hızlandıracak. Sonuçta daha hızlı, güvenli ve rekabetçi bankacılık modelleri ortaya çıkacak."
+      }
+    ],
+    "title": "Yapay zeka bankacılığı nasıl e...",
+    "titleSet": true
+  }
+]
