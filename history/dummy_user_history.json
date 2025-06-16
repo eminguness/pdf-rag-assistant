@@ -1,7 +1,298 @@
 [
   {
+    "id": 7,
+    "title": "muhammed emin güneş hangi şirk...",
+    "messages": [
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "muhammed emin güneş, üç farklı kurumda staj yapmıştır:  \n1. Şubat–Haziran 2025 döneminde aktif tech’de,  \n2. Haziran–Temmuz 2024 döneminde kriptarium’te,  \n3. Temmuz 2023 döneminde sia teknoloji’de yazılım mühendisi stajyeri olarak görev almıştır."
+      }
+    ],
+    "titleSet": true
+  },
+  {
+    "id": 6,
+    "messages": [
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "Şubat 2025–Haziran 2025 döneminde aktif tech’te, Haziran–Temmuz 2024 döneminde kriptarium’te ve Temmuz 2023’te sia teknoloji şirketlerinde yazılım mühendisi stajyeri olarak çalışmıştır."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi projeleri yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "muhammed emin güneş, kurumsal iş süreçlerinin dijital dönüşümüne yönelik olarak  \n1) BERT tabanlı derin öğrenme modeli ve XAI entegrasyonuyla manuel süreçlerin verimsizliğini gideren bir sistem,  \n2) RAG mimarisi ve LangChain çerçevesi kullanarak doğal dil işleme temelli otomatik cevaplama (sürekli öğrenen kurumsal asistan) projesini hayata geçirdi.  \nAyrıca stajlarında RAG-NER maskeleme ile chatbot geliştirme ve YOLO tabanlı görüntü işleme projelerinde görev aldı."
+      },
+      {
+        "sender": "user",
+        "text": "eren aslan antalya'da beko şirketinde staj yapmış mıdır"
+      },
+      {
+        "sender": "bot",
+        "text": "eren aslan, antalya, o hakkında yeterli bilgiye ulaşılamadı. Lütfen farklı bir soru deneyin."
+      },
+      {
+        "sender": "user",
+        "text": "ömer taha erdem  manisa'da arçelik şirketinde staj yapmış mıdır"
+      },
+      {
+        "sender": "bot",
+        "text": "ömer taha erdem, manisa hakkında yeterli bilgiye ulaşılamadı. Lütfen farklı bir soru deneyin."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "Bu kişiyle ilgili staj yaptığı şirketlere dair elimde bilgi yok."
+      }
+    ],
+    "title": "muhammed emin güneş hangi şirk...",
+    "titleSet": true
+  },
+  {
+    "id": 5,
+    "messages": [
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi projeleri yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "Kendisinin iki ana projesi bulunuyor:  \n1. BERT tabanlı derin öğrenme ve açıklanabilir yapay zeka (XAI) teknikleriyle manuel kurumsal süreçleri dijitalleştirip verimliliği artırmaya ve hata oranlarını düşürmeye yönelik proje.  \n2. RAG (retrieval-augmented generation) mimarisi ile LangChain kullanarak, daha önceden tanımlanmış dokümanlar üzerinde doğal dil işleme temelli otomatik cevaplama sunan sürekli öğrenen kurumsal asistan geliştirme projesi."
+      },
+      {
+        "sender": "user",
+        "text": "peki muhammed emin güneş in bu projerleri destek almış mı almışsa bunlar arasında tübitak da var mı"
+      },
+      {
+        "sender": "bot",
+        "text": "Evet, bu projeler destek almış; destekleyen kurumlar arasında tübitak de yer alıyor (2209-B sanayiye yönelik lisans araştırma projeleri desteği)."
+      }
+    ],
+    "title": "muhammed emin güneş hangi proj...",
+    "titleSet": true
+  },
+  {
+    "id": 3,
+    "messages": [
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "I’m sorry, but I don’t know."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "I’m sorry, but I don’t know."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yaptı"
+      },
+      {
+        "sender": "bot",
+        "text": "<person_10e543bd>, yazılım mühendisi stajyer olarak sırasıyla sia teknoloji (Temmuz 2023), kriptarium (Haziran–Temmuz 2024) ve aktif tech (Şubat–Haziran 2025) şirketlerinde staj yaptı."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yaptı"
+      },
+      {
+        "sender": "bot",
+        "text": "Person_10e543bd üç farklı şirkette staj yaptı:  \n1. Şubat–Haziran 2025 arasında aktif tech’de  \n2. Haziran–Temmuz 2024 döneminde kriptarium’te  \n3. Temmuz 2023’te sia teknoloji’de  "
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yaptı"
+      },
+      {
+        "sender": "bot",
+        "text": "Buna göre muhammed emin güneş,  \n1. Şubat–Haziran 2025 tarihleri arasında aktif tech’de,  \n2. Haziran–Temmuz 2024 arasında kriptarium’te,  \n3. Temmuz 2023’te sia teknoloji’de yazılım mühendisi stajyerliği yapmıştır."
+      },
+      {
+        "sender": "user",
+        "text": "hangi üniversitede okumuştur"
+      },
+      {
+        "sender": "bot",
+        "text": "Verilen bilgilerde hangi üniversitede okuduğuna dair bir bilgi bulunmuyor."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yaptı"
+      },
+      {
+        "sender": "bot",
+        "text": "B87a9200, yazılım mühendisi stajyer pozisyonlarını sırasıyla üç şirkette yaptı:  \n1. Temmuz 2023’te sia teknoloji  \n2. Haziran–Temmuz 2024’te kriptarium  \n3. Şubat–Haziran 2025’te aktif tech"
+      },
+      {
+        "sender": "user",
+        "text": "B87a9200 kim"
+      },
+      {
+        "sender": "bot",
+        "text": "Kaynaklarda “b87a9200” koduyla anılan bir kişiye dair bilgi yer almıyor, bu yüzden kim olduğu bilinmiyor."
+      },
+      {
+        "sender": "user",
+        "text": "tamam muhammed emin güneş hangi alan üzerinde çalışıyor"
+      },
+      {
+        "sender": "bot",
+        "text": "Güneş yazılım mühendisi olarak yapay zeka, makine öğrenmesi ve görüntü işleme alanlarında çalışıyor."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yaptı peki"
+      },
+      {
+        "sender": "bot",
+        "text": "Bu konuda elimde bilgi yok."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş staj yaptı mı"
+      },
+      {
+        "sender": "bot",
+        "text": "Evet. Şubat–Haziran 2025’te aktif tech’te, Haziran–Temmuz 2024’te kriptarium’te ve Temmuz 2023’te sia teknoloji’de yazılım mühendisi stajyeri olarak staj yaptı."
+      },
+      {
+        "sender": "user",
+        "text": "peki ahmet akgün nerlerde staj yaptı"
+      },
+      {
+        "sender": "bot",
+        "text": "ahmet akgün, Şubat–Haziran 2025’te aktif tech’te, Haziran–Temmuz 2024’te kriptarium’te ve Temmuz 2023’te sia teknoloji’de yazılım mühendisi stajyeri olarak çalıştı."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi şirketlerde staj yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "Kendisi üç farklı şirkette staj yapmıştır:  \n1. Şubat–Haziran 2025 arasında aktif tech  \n2. Haziran–Temmuz 2024 arasında kriptarium  \n3. Temmuz 2023 döneminde sia teknoloji"
+      },
+      {
+        "sender": "user",
+        "text": "peki yunus aktürkoğlu nerelerde staj yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "yunus aktürkoğlu hakkında yeterli bilgiye ulaşılamadı. Lütfen farklı bir soru deneyin."
+      },
+      {
+        "sender": "user",
+        "text": "Peki Muhammed Emin Güneş softech şirketinde istanbul konumunda bir staj yaptı mı"
+      },
+      {
+        "sender": "bot",
+        "text": "istanbul hakkında yeterli bilgiye ulaşılamadı. Lütfen farklı bir soru deneyin."
+      },
+      {
+        "sender": "user",
+        "text": "Barış Yılmaz Ankarada Gib teknoloji şirketinde  bir staj yaptı mı"
+      },
+      {
+        "sender": "bot",
+        "text": "barış yılmaz, ankara, gib hakkında yeterli bilgiye ulaşılamadı. Lütfen farklı bir soru deneyin."
+      },
+      {
+        "sender": "user",
+        "text": "Peki muhammed emin güneş hangi üniversitede eğitim gördü"
+      },
+      {
+        "sender": "bot",
+        "text": "Üzgünüm, sağlanan bilgilerde muhammed emin güneş’ın hangi üniversitede eğitim gördüğüne dair bir bilgi yer almıyor."
+      },
+      {
+        "sender": "user",
+        "text": "peki muhammed emin güneş hangi alanlar üzerine çalışıyor"
+      },
+      {
+        "sender": "bot",
+        "text": "muhammed emin güneş doğal dil işleme ve otomatik cevaplama sistemlerinde RAG mimarisi, Langchain ve Flask tabanlı web arayüzü üzerine çalışıyor. Ayrıca YOLOv8 ve OpenCV ile inşaat alanında güvenlik ekipmanlarının gerçek zamanlı tespiti, makine öğrenmesi ve derin öğrenme uygulamaları geliştiriyor. Teknik becerileri arasında Python, Java, C#, NLP, görüntü işleme, SQL ve web teknolojileri (HTML, CSS, JavaScript) bulunuyor."
+      },
+      {
+        "sender": "user",
+        "text": "peki zeki aslan hangi alanlar üzerine çalışıyor"
+      },
+      {
+        "sender": "bot",
+        "text": "zeki aslan hakkında yeterli bilgiye ulaşılamadı. Lütfen farklı bir soru deneyin."
+      },
+      {
+        "sender": "user",
+        "text": "Muhammed Emin Güneş hangi kurumdan eğitim aldı"
+      },
+      {
+        "sender": "bot",
+        "text": "Bu bilgiler arasında muhammed emin güneş’e ait hangi kuruma bağlı eğitim aldığı belirtilmemiş, dolayısıyla bilemiyorum."
+      },
+      {
+        "sender": "user",
+        "text": "Hangi yazılım mühendisliğinde okudu"
+      },
+      {
+        "sender": "bot",
+        "text": "Bilmiyorum."
+      },
+      {
+        "sender": "user",
+        "text": "Muhammed Emin Güneş hangi sertifikaları aldı"
+      },
+      {
+        "sender": "bot",
+        "text": "Verilen bilgilerde muhammed emin güneş’in aldığı herhangi bir sertifika yer almıyor."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş hangi projeleri yaptı"
+      },
+      {
+        "sender": "bot",
+        "text": "Person_b87a9200 şu iki ana projeyi yürüttü:  \n1. Kurumsal iş süreçlerindeki verimsizlikleri gidermek amacıyla BERT tabanlı derin öğrenme modeli ile açıklanabilir yapay zeka (XAI) tekniklerini entegre eden dijital dönüşüm çözümü.  \n2. Önceden tanımlı kurumsal dokümanlar üzerinde RAG (Retrieval-Augmented Generation) mimarisini ve LangChain çerçevesini kullanan, Flask tabanlı web arayüzlü otomatik cevaplama sistemi (sürekli öğrenen kurumsal asistan)."
+      },
+      {
+        "sender": "user",
+        "text": "ahmet sancaklı hangi projeleri yaptı"
+      },
+      {
+        "sender": "bot",
+        "text": "ahmet sancaklı hakkında yeterli bilgiye ulaşılamadı. Lütfen farklı bir soru deneyin."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş in projeleri hangi kurumlardan destek aldı içerisinde tübitak var mı"
+      },
+      {
+        "sender": "bot",
+        "text": "Projeleri 2209-B sanayiye yönelik lisans araştırma projeleri desteği veren tübitak, yapay zeka akademik tez programı kapsamında sayzek–atp (savunma sanayii başkanlığı (ssb) ve yök iş birliğinde yürütülen program tarafından desteklendi. Evet, listede tübitak yer alıyor."
+      }
+    ],
+    "title": "muhammed emin güneş hangi şirk...",
+    "titleSet": true
+  },
+  {
     "id": 2,
-    "title": "Aktif bank ,yapay zekaya ayak ...",
     "messages": [
       {
         "sender": "user",
@@ -10,23 +301,33 @@
       {
         "sender": "bot",
         "text": "Aktif Bank, iştirak şirketi AktifTech öncülüğünde makine öğrenmesi temelli stratejik yapay zekâ projeleri (örneğin günlük log analizi) geliştirip hayata geçiriyor. KPMG işbirliğiyle teknoloji altyapısı, mimari, süreçler, yönetim ve yetkinlikleri analiz ederek vizyon atölyeleri düzenleyip öncelikli use case’leri belirleyip uygulama yol haritası oluşturdu. UPT, Paso gibi dijital platformlarında müşteri hizmetlerinden video bankacılığına kadar yapay zekâyı entegre ederek bankacılıkta dijitalleşme dönüşümüne öncülük ediyor."
-      }
-    ],
-    "titleSet": true
-  },
-  {
-    "id": 1,
-    "messages": [
+      },
       {
         "sender": "user",
-        "text": "Yapay zeka bankacılığı nasıl etkileyecek"
+        "text": "aktif bank kaç tane fikiri var"
       },
       {
         "sender": "bot",
-        "text": "Yapay zeka, işlem süreçlerini otomatikleştirip veri analitiğiyle operasyonel verimliliği artıracak ve müşteri deneyimini kişiselleştirerek hizmet kalitesini yükseltecek. Bankacılığı yalnızca finansal bir hizmet değil, tüm sektöre açılan bir teknoloji ekosistemi haline getirerek dijitalleşme yolculuğunu hızlandıracak. Sonuçta daha hızlı, güvenli ve rekabetçi bankacılık modelleri ortaya çıkacak."
+        "text": "Verilen kaynaklarda Aktif Bank’ın kaç adet “fikri” olduğu bilgisi yer almıyor; bu konuda elimde bir veri bulunmuyor."
+      },
+      {
+        "sender": "user",
+        "text": "fikir yarışmasında kaç tane fikir vardı"
+      },
+      {
+        "sender": "bot",
+        "text": "Bu konuda bilgiye sahip değilim."
+      },
+      {
+        "sender": "user",
+        "text": "yapay zeka hakkında kaç tane fikri var"
+      },
+      {
+        "sender": "bot",
+        "text": "Aktif Bank’ın düzenlediği use case çalıştayında yapay zeka ile değerlendirilebilecek 182 fikir belirlenmiştir."
       }
     ],
-    "title": "Yapay zeka bankacılığı nasıl e...",
+    "title": "Aktif bank ,yapay zekaya ayak ...",
     "titleSet": true
   }
 ]

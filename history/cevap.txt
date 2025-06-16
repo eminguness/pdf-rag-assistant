@@ -1,0 +1,4 @@
+Person_b87a9200, üç farklı kurumda staj yapmıştır:  
+1. Şubat–Haziran 2025 döneminde <kurum_49632abd>’de,  
+2. Haziran–Temmuz 2024 döneminde <kurum_486063d3>’te,  
+3. Temmuz 2023 döneminde <kurum_9d24a6de>’de yazılım mühendisi stajyeri olarak görev almıştır.
