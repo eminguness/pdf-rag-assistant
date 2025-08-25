@@ -1,7 +1,12 @@
 [
   {
+    "id": 8,
+    "title": "New Chat",
+    "messages": [],
+    "titleSet": false
+  },
+  {
     "id": 7,
-    "title": "muhammed emin güneş hangi şirk...",
     "messages": [
       {
         "sender": "user",
@@ -10,8 +15,25 @@
       {
         "sender": "bot",
         "text": "muhammed emin güneş, üç farklı kurumda staj yapmıştır:  \n1. Şubat–Haziran 2025 döneminde aktif tech’de,  \n2. Haziran–Temmuz 2024 döneminde kriptarium’te,  \n3. Temmuz 2023 döneminde sia teknoloji’de yazılım mühendisi stajyeri olarak görev almıştır."
+      },
+      {
+        "sender": "user",
+        "text": "Ahmet Akgün Ankara'da  staj yapmışdır"
+      },
+      {
+        "sender": "bot",
+        "text": "ahmet akgün, ankara hakkında yeterli bilgiye ulaşılamadı. Lütfen farklı bir soru deneyin."
+      },
+      {
+        "sender": "user",
+        "text": "muhammed emin güneş nerelerde staj yapmıştır"
+      },
+      {
+        "sender": "bot",
+        "text": "Buna göre muhammed emin güneş,  \n1. Şubat 2025–Haziran 2025 tarihlerinde aktif tech’te,  \n2. Haziran–Temmuz 2024 döneminde kriptarium’te,  \n3. Temmuz 2023’te sia teknoloji’de yazılım mühendisi stajyeri olarak çalışmıştır."
       }
     ],
+    "title": "muhammed emin güneş hangi şirk...",
     "titleSet": true
   },
   {
